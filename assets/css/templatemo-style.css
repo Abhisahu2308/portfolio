@@ -23,36 +23,63 @@ body {
 
 
 /* Basic */
+.image-slider-container {
+    display: flex;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  
+  .image-slider-item {
+    display: none;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .image-slider-item.active {display: block;
+    transform: translateX(0);
+  }
 .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      color:black;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-    .popup-content {
-      text-align: center; color: Black;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .popup-content {
+    text-align: center; color: rgb(2, 2, 2);
+  
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+  }
+  
+  .popup-content img {
+      max-width: 60%;
+      height:100%;
+      float: left;
+      margin-right: 20px
+  }
+  .popup-content p {
+      flex: 1;
+      margin: 0;
+      position:right;
     }
     
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      font-size: 25px;
-      color: #333;
+    .popup-content a {
+      display: block;
+      margin-top: 10px;
     }
-    
-    .popup-content img {
-      margin-bottom: 10px;
-    }
-    
 
 body {
     overflow-x: hidden;
@@ -465,41 +492,116 @@ button:hover {
 }
 
 .service-item .first-service-icon {
-    background-image: url(../images/first-white-icon.png);
+    background-image: url(../images/first-sql.png);
 }
 
 .service-item:hover .first-service-icon {
-    background-image: url(../images/first-main-icon.png);
+    background-image: url(../images/second-sql.png);
 }
 
 .service-item .second-service-icon {
-    background-image: url(../images/second-white-icon.png);
+    background-image: url(../images/first-python.png);
 }
 
 .service-item:hover .second-service-icon {
-    background-image: url(../images/second-main-icon.png);
+    background-image: url(../images/second-python.png);
 }
 
 .service-item .third-service-icon {
-    background-image: url(../images/third-white-icon.png);
+    background-image: url(../images/first-powerbi.png);
 }
 
 .service-item:hover .third-service-icon {
-    background-image: url(../images/third-main-icon.png);
+    background-image: url(../images/second-powerbi.png);
 }
 
 .service-item .fourth-service-icon {
-    background-image: url(../images/fourth-white-icon.png);
+    background-image: url(../images/first-tableau.png);
 }
 
 .service-item:hover .fourth-service-icon {
-    background-image: url(../images/fourth-main-icon.png);
+    background-image: url(../images/second-excel.png);
 }
 
+/* my work*/
 
-/* My Work */
+.my-work .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
-section.my-work .section-heading {
+.my-work-item {
+    margin-bottom: 10px;
+    padding: 50px;
+    background-color: rgba(250, 250, 250, 0.1);
+    transition: all 0.5s;
+}
+
+.my-work-item h4 {
+    transition: all 0.5s;
+}
+
+.my-work-item p {
+    transition: all 0.5s;
+}
+
+.my-work-item:hover {
+    background-color: rgba(250, 250, 250, 1);
+}
+
+.my-work-item:hover h4 {
+    color: #1e1e1e;
+}
+
+.my-work-item:hover p {
+    color: #4a4a4a;
+}
+
+.my-work-item .my-work-icon {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+}
+
+.my-work-item .first-my-work-icon {
+    background-image: url(../images/first-amazon1.png);
+}
+
+.my-work-item:hover .first-my-work-icon {
+    background-image: url(../images/second-amazon.png);
+}
+
+.my-work-item .second-my-work-icon {
+    background-image: url(../images/first-fdi.png);
+}
+
+.my-work-item:hover .second-my-work-icon {
+    background-image: url(../images/second-fdi.png);
+}
+
+.my-work-item .third-my-work-icon {
+    background-image: url(../images/first-cup.png);
+}
+
+.my-work-item:hover .third-my-work-icon {
+    background-image: url(../images/second-cup.png);
+}
+
+.my-work-item .fourth-my-work-icon {
+    background-image: url(../images/second-zomato.png);
+}
+
+.my-work-item:hover .fourth-my-work-icon {
+    background-image: url(../images/first-zomato.png);
+}
+
+/* My certification*/
+
+section.Certification .section-heading {
     text-align: center;
     padding: 80px 45px 50px 45px;
 }
@@ -707,6 +809,7 @@ section.contact-me {
     text-align: center;
 }
 
+
 @media screen and (max-width: 1680px) {
     .menu {
         left: 5%;
@@ -719,6 +822,44 @@ section.contact-me {
         left: 30%;
     }
 }
+.social-media {
+    margin-top: 20px; /* Add margin to separate from the form */
+    text-align: center; /* Center-align the social media links */
+  }
+
+  .social-media a {
+    display: inline-block; /* Display the links in a row */
+    margin: 0 10px; /* Add margin between the links */
+    font-size: 20px; /* Increase the font size for better visibility */
+    color: #333; /* Set the color to a dark shade for contrast */
+    text-decoration: none; /* Remove underline from the links */
+  }
+
+  .social-media a:hover {
+    color: #cc0000; /* Change color on hover */
+  }
+
+  .button {
+    display: block; /* Display the button as a block element */
+    margin: 20px auto; /* Center-align the button */
+    padding: 10px 20px; /* Add some padding for better appearance */
+    background-color: #cc0000; /* Dark red button background color */
+    color: #fff; /* White button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    text-decoration: none; /* Remove underline from the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  .button:hover {
+    background-color: #990000; /* Darken button color on hover */
+  }
+
+  .thankyou {
+    text-align: center; /* Center-align the thank you message */
+    font-style: italic; /* Italicize the text */
+    margin-top: 20px; /* Add margin to separate from the button */
+  }
 
 @media screen and (max-width: 1680px) and (min-width: 846px) { 
     .menu .social-network ul li a {
