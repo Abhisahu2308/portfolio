@@ -23,15 +23,34 @@ body {
 
 
 /* Basic */
+.slider-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .slider-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #a43f49;
+    position: absolute;
+    bottom: -10px; /* Position the line below the title */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Adjust to center the line */
+  }
 .image-slider-container {
     display: flex;
     overflow: hidden;
     margin-top: 50px;
+    height: 500px;
   }
   
   .image-slider-item {
     display: none;
     width: 100%;
+    height: 100%;
     transition: transform 0.5s ease;
   }
   
@@ -829,10 +848,13 @@ section.contact-me {
 
   .social-media a {
     display: inline-block; /* Display the links in a row */
+    vertical-align: top;
     margin: 0 10px; /* Add margin between the links */
-    font-size: 20px; /* Increase the font size for better visibility */
-    color: #333; /* Set the color to a dark shade for contrast */
+    font-size: 30px; /* Increase the font size for better visibility */
+    color: #fdfffe; /* Set the color to a dark shade for contrast */
     text-decoration: none; /* Remove underline from the links */
+    border-color: #09079b;
+    border-radius:10px ;
   }
 
   .social-media a:hover {
@@ -856,9 +878,10 @@ section.contact-me {
   }
 
   .thankyou {
+    font-size: 20px;
     text-align: center; /* Center-align the thank you message */
     font-style: italic; /* Italicize the text */
-    margin-top: 20px; /* Add margin to separate from the button */
+    margin-top: 30px; /* Add margin to separate from the button */
   }
 
 @media screen and (max-width: 1680px) and (min-width: 846px) { 
